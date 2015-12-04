@@ -12,7 +12,10 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > ls - list files in current directory
+> > 
+
+---
+ls - list files in current directory
 	mkdir - make a directory
 	cd - change directory
 	rmdir - remove a directory
@@ -23,8 +26,6 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 	rm - remove a file (I use this one occasionally, too)
 	pushd - Move around between directories
 	popd - Takes you back to the last directory you pushed from
-
----
 
 
 ---
