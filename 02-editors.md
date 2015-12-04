@@ -31,7 +31,7 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Have both Gedit and Emacs.  Downloaded Emacs, and Gedit came with my Ubuntu install.
 
 ---
 
@@ -61,6 +61,6 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Have download Spyder as per the Install requirements, but have been using Sublime with my current bootcamp and am very happy with it thus far.  Will continue to use it until this changes, or am directed otherwise.
 
 ---
