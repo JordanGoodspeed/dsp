@@ -12,7 +12,7 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > ls - list files in current directory
+	 ls - list files in current directory
 	mkdir - make a directory
 	cd - change directory
 	rmdir - remove a directory
@@ -31,7 +31,7 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 
 What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations of those flags are meaningful?
 
-> > ls - lists files in current directory
+	ls - lists files in current directory
 	ls -a - lists all files, including hidden ones (denoted by the "." at the beginning of the file name)
 	ls -l - Lists all files in long form, including file type, permissions, owner, group, etc.
 	ls -lh - Lists all files in long form, but the -h modifies the output to a more human-readable form
@@ -43,7 +43,7 @@ What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > xargs stands for 'execute argument'.  It takes the input you give it, and then executes it at the specified location.  This is really useful when paired with, for instance, the find command.  You can take the output of the find command as the input of xargs, and have it execute the rm -rf command on the files you specified.
+ xargs stands for 'execute argument'.  It takes the input you give it, and then executes it at the specified location.  This is really useful when paired with, for instance, the find command.  You can take the output of the find command as the input of xargs, and have it execute the rm -rf command on the files you specified.
 
 ---
 
