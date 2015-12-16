@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Lists and tuples are both sequences of values, which can be of any type.  The key difference between them is that tuples are immutable, while lists can be changed.  Tuples can also represent multiple values as a single one, allowing them to be used as keys in dictionaries, unlike lists (lists can still be values, though).
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+A list in Python is an ordered sequence of values, while a set is an unordered sequence of values.  Set elements must be hashable.  They cannot contain duplicates.  Because of this, sets cannot support slices, sorts, or other operations on ordered data.  They can, however, perform intersect, union, and other operations from set theory.  Sets are faster for finding a unique element, while lists are better at iterating over the whole selection.
 
 ---
 
@@ -28,7 +28,20 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+The lambda operator or function is a way of creating small anonymous (unnamed) functions, which are called at the moment of creation.  The syntax involves lambda, the arguments, a colon, and then the expression.  For example:
+
+f = lambda x: x**2
+	f(4)
+		16
+or:
+a = ['Z', "a", 'E', "p"]
+sorted(a)
+['E', 'Z', 'a', 'p']
+
+Sorted sorts upper case letters before lower.  Rather than write a new function in main, we can write a lambda expression just for this occasion:
+
+sorted(a, key=lambda word: word.lower())
+['a', 'E', 'p', 'Z']
 
 ---
 
@@ -36,7 +49,18 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+A list comprehension is a way of creating a list without enumerating each element specifically.  You do it by creating a list, and within the square brackets you specify the operation to perform on i, the range of i, and any special methods of filtering, like so:
+
+a = [i**2 for i in range(18) if i % 2 == 0]
+
+This gives us the squares of the even numbers from 0 to 18 (non-inclusive).  What this is basically equivalent to is a 'map' (squaring each element) and 'filter' (selecting only even numbers) operation, like so:
+
+list1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+evens = filter(lambda x: x % 2 == 0, list1)
+square = map(lambda x: x**2, evens)
+
+
+List comprehension is generally preferred in Python, though if you already have the function defined it is acceptable to use map().  It may be slightly faster to use map, as well, though this varies on the expression (built-in expressions are fine, lambda expressions are slower).  Map may also use less memory, as it is lazy in Python, while list comprehension is not.
 
 ---
 
