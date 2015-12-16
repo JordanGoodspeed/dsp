@@ -35,12 +35,15 @@ f = lambda x: x**2
 		16
 or:
 a = ['Z', "a", 'E', "p"]
+
 sorted(a)
+
 ['E', 'Z', 'a', 'p']
 
 Sorted sorts upper case letters before lower.  Rather than write a new function in main, we can write a lambda expression just for this occasion:
 
 sorted(a, key=lambda word: word.lower())
+
 ['a', 'E', 'p', 'Z']
 
 ---
