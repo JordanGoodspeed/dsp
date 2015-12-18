@@ -1,6 +1,6 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
-
+from heapq import merge
 
 def match_ends(words):
     """
@@ -15,8 +15,16 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    count = 0
+    for word in words:
+        if len(word) > 1:
+            if word[0] == word[-1]:
+                count += 1
+    print count
 
+match_ends(['aba', 'xyz', 'aa', 'x', 'bbb'])
+match_ends(['', 'x', 'xy', 'xyx', 'xx'])
+match_ends(['aaa', 'be', 'abc', 'hello'])
 
 def front_x(words):
     """
@@ -32,8 +40,17 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    words.sort()
+    index = 0
+    for word in words:
+        if word.startswith('x'):
+            index = words.index(word)
+            break
+    print words[index:] + words[:index]
 
+front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
+front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
+front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
 
 def sort_last(tuples):
     """
@@ -49,8 +66,11 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    print sorted(tuples, key=lambda x: x[-1])
 
+sort_last([(1, 3), (3, 2), (2, 1)])
+sort_last([(2, 3), (1, 2), (3, 1)])
+sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
 
 def remove_adjacent(nums):
     """
@@ -68,8 +88,18 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    i = 1
+    while i < len(nums):    
+        if nums[i] == nums[i-1]:
+            nums.pop(i)
+            i -= 1  
+        i += 1
+    print nums
 
+remove_adjacent([1, 2, 2, 3])
+remove_adjacent([2, 2, 3, 3, 3])
+remove_adjacent([3, 2, 3, 3, 3])
+remove_adjacent([])
 
 def linear_merge(list1, list2):
     """
@@ -85,4 +115,9 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    #print sorted(list1 + list2) #Faster than a merge for merged list under 1000000
+    print list(merge(list1, list2)) #This is from heapq module, and basically implements the merge sort algorithm for you.
+
+linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
+linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz'])
+linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
