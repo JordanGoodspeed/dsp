@@ -74,7 +74,9 @@ faculty_dict = { 'Ellenberg': [\
 Print the first 3 key and value pairs of the dictionary:
 
 Bellamy: [' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu']
+
 Bilker: ['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu']
+
 Bryan: [' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu']
 
 
@@ -92,15 +94,19 @@ professor_dict = {('Susan', 'Ellenberg'): ['Ph.D.', 'Professor', 'sellenbe@upenn
 Print the first 3 key and value pairs of the dictionary:
 
 ('A.', 'Localio'): [' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu'] 
+
 ('Alisa', 'Stephens'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu']
+
 ('Andrea', 'Troxel'): [' ScD', 'Professor of Biostatistics', 'atroxel@mail.med.upenn.edu']
 
-#A. Russel Localio is free to go by his middle name if he chooses, there is no compelling reason to change the whole program for one person
+#A. Russell Localio is free to go by his middle name if he chooses, there is no compelling reason to change the whole program for one person
 
 ####Q8.  It looks like the current dictionary is sorted by first name.  Sort by last name and print the first 3 key and value pairs.  
 
 ('Scarlett', 'Bellamy'): [' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu']
+
 ('Warren', 'Bilker'): ['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu']
+
 ('Matthew', 'Bryan'): [' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu']
 
 
