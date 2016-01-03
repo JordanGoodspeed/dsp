@@ -1,5 +1,11 @@
 #[Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 """
+Here is the problem:
+
+Using the variable totalwgt_lb, investigate whether first babies are lighter or heavier than others. Compute Cohen’s d to quantify the difference between the groups. How does it compare to the difference in pregnancy length?
+"""
+
+"""
 The pregnancy data is contained in 2002FemPreg.dat.gz, which is a gzip-compressed file in ASCII plain text.  Its formatting is contained in 2002FemPreg.dict, which is a Stata file that contains the indices, variable names, and types that identify the information in the data file. The function ReadFemPreg in the nsfg2.py file reads the data, and then calls the CleanFemPreg function, which cleans the data to eliminate errors, convert some units, and provides a new column, totalweight_lb, which it computes from the birthweight_lb and birthweight_oz columns.  Within the chap02soln.py file, the author provides the code to calculate the means, variance, and Cohen D for the weight of firstborn babies versus all others.  The mean weight of firstborns is 7.20109443044lbs, while that of all other infants is 7.32585561497lbs.  The variance in the weights for firstborns is 2.01802730092lbs, and that for all others is 1.9437810259lbs.  The Cohen D for the weights was calculated within the same function (WeightDifference from the chap02soln.py) using the difference of the means above, divided by the pooled standard deviation (which itself is calculated from the variance of each, times the sample size of each (derived by calling len(column), divided by the combined sample size of firstborns versus others).  This computes to -0.0886729270726, which is greater than the provided Cohen D for differences in pregnancy lengths between firstborns and others (0.029), but smaller than, say, the 1.7 standard deviations difference in average sizes between men and women (about 1.7).
 
 In order to understand this more fully, I chose to write the DataFrame built by pandas into a MySQLdb (as I have a little more experience with SQL than pandas, which I could then query using mysql statements.
