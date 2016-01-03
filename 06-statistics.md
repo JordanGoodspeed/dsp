@@ -50,14 +50,50 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Bayes theorem is written in the form P(A|B) = P(A)P(B|A)/P(B), where:
+
+P(A|B) or P(H|D) = Which is the probability of seeing A given B.  Written another way, this is the probability of the hypothesis given the data.
+
+P(A) or P(H) = Probability of A on its own, or the probability of the hypothesis without reference to the data.
+
+P(B|A) or P(D|H) = the probability of observing B given A, or the probability of the data given the hypothesis.  The "likelihood" of the event.
+
+P(B) or P(D) = The probability of the data, B, under any hypothesis.  This is also called the "normalizing constant".
+
+Also relevant here is the Law of Total Probability, which states that when there are three exclusive events the probability of the data is:
+
+							P(B|C1)P(C1) + P(B|C2)P(C2) + P(B|C3)P(C3)
+where P(B) is the data and C1, C2, and C3 are the probabilities of the three events, in this case fraternal twin, identical twin, and not a twin.
+
+
+Now, for the Elvis problem (of which there were many), given the P(fraternal twin) and P(identical twin), we must give the probability that a child born is a boy (roughly 1/2), and the chance that two children born are boys (1/4).  So, as we are trying to find P(A|B), or 
+P(Elvis had an indentical twin|Elvis had a twin brother):
+
+P(A) = P(Having an identical twin), or 1/300
+
+P(B|A) = The probability of having a twin brother given an identical twin, or 1/2 (as half of twins are boys and half are girls)
+
+P(B|C1)P(C1) = The probability of having a twin brother who is a fraternal twin, or 1/4 (The possibilities for fraternal twin are boy-boy, boy-girl, girl-boy, and girl girl) times (1/125)
+
+P(B|C2)P(C2) = The probability of a twin brother given identical twins (the possibilities are boy-boy and girl-girl), 1/2 * 1/300
+
+P(B|C3)P(C3) = The probability of having a twin brother assuming that he isn't a twin, or 0.
+
+Putting this together gives P(A|B) = (1/2 * 1/300) / ((1/4 * 1/125) + (1/2 * 1/300) + 0)
+
+									= (1/600) /  (1/500 + 1/600)
+									= (1/600) / (6/3000 + 5/3000)
+									= (1/600) / (11/3000)
+									= 3000 / (11 * 600)
+									= 5/11
+The answer is 5/11.  
 
 ---
 
 ###Q8. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+The difference between frequentist and Bayesian statistics revolve around how the word "probability" is defined.  To a frequentist, the hypothesis is treated as being true, or not, and the data as variable.  The name comes from the fact that frequentists look for the number of times, or frequency, with which they expect to observe the data, given the hypothesis.  To Bayesians, by contrast, what is under examination is the likelihood of the hypothesis, given the data.  The name comes from the use of Bayes theorem to compute this.  Consequently, for Bayesians probability means the plausibility of the hypothesis, whereas for frequentists probability is the expected frequency of the data's occurence.
 
 ---
 
